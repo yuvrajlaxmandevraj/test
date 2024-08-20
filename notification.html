@@ -1,0 +1,43 @@
+<html>
+  <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>    
+<script type="javascript/text" src="cookie.min.js"></script>
+  </head>
+  <body>
+    <h1>Notifications Data</h1>
+  </body>
+  <script>
+var audio = new Audio('https://restodish.com/neworder.mp3');
+audio.play();
+window.addEventListener('DOMContentLoaded',function () {
+
+    Notification.requestPermission().then(function(result) {     
+      const notificationOption={
+          body:'Hello Restodish you have new Order',
+          icon:'icon.png'
+      };
+          var notification = new Notification('New Order', notificationOption);
+          notification.onclick = function(ev){
+              ev.preventDefault();
+              window.open('sdsss', '_blank');
+              notification.close();             
+          }
+    });
+    setTimeout( function() {   
+      $("#ddcmdkvmdkmvdkvmdkvm").trigger("play");
+      $("body").trigger("play");
+    },2000);
+
+    document.querySelector('body').addEventListener('click', function() {
+      new Audio('https://restodish.com/neworder.mp3').play();
+    });
+    $(document).ready(function() {
+      var audio = document.getElementById("ddcmdkvmdkmvdkvmdkvm");
+      audio.play();
+    });
+
+  });
+
+
+  </script>
+</html>
